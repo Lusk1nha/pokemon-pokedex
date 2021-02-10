@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEDEX</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./assets/pikachu.png">
+
+</head>
+<body>
+    <header class="title"><h1>Pokedex</h1></header>
+    <div class="generation">1° Generation - Kanto</div>
+
+    <div class="choose-container">
+        <select name="choosing-generation" class="generationSelect" onchange="callingPokedex(this.value)">
+            <option value="1">1° Generation</option>
+            <option value="2">2° Generation</option>
+            <option value="3">3° Generation</option>
+            <option value="4">4° Generation</option>
+            <option value="5">5° Generation</option>
+            <option value="6">6° Generation</option>
+            <option value="7">7° Generation</option>
+            <option value="8">8° Generation</option>
+        </select>
+        
+    </div>
+
+    <div class="container">
+        <div class="content"></div>
+
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

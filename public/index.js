@@ -7,8 +7,7 @@ let createRow = undefined
 const generations = {
     "1": { gen: 1, total: 1, name: "Kanto"},
     "2": { gen: 2, total: 152, name: "Johto"},
-    "3": { gen: 3, total: 252, name: "Hoenn"},
-    "4": { gen: 4, total: 387, name: "Sinnoh"}
+    "3": { gen: 3, total: 252, name: "Johto"},
 }
 
 callingPokedex(1)
@@ -34,9 +33,7 @@ async function getPokemon(geneBegin, geneEnd) {
     generationTitle.innerHTML = `${geneBegin.name}`
 
     // This code is the API consumption
-    for ( let index = geneBegin.total; index < geneEnd.total; index++ ) {
-        if ( index === 350 || index === 310) index++ // ! the pokemon with id 350, was removed from api
-        
+    for ( let index = geneBegin.total; index < geneEnd.total; index++ ) {        
         const url = `https://pokeapi.co/api/v2/pokemon/${index}`
 
         const response = await fetch(url)

@@ -35,7 +35,7 @@ async function getPokemon(geneBegin, geneEnd) {
 
     // This code is the API consumption
     for ( let index = geneBegin.total; index < geneEnd.total; index++ ) {
-        if ( index === 350 ) index++ // ! the pokemon with id 350, was removed from api
+        if ( index === 350 || index === 310) index++ // ! the pokemon with id 350, was removed from api
         
         const url = `https://pokeapi.co/api/v2/pokemon/${index}`
 

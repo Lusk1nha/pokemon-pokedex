@@ -137,6 +137,8 @@ body {
   grid-template-rows: 1fr;
   row-gap: 2rem;
 
+  padding-bottom: 2rem;
+
 }
 
 .pokemon {

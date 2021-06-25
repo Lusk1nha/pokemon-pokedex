@@ -2,9 +2,9 @@ const container = document.querySelector('.container')
 const selectContainer = document.querySelector('.generationSelect')
 
 const generations = {
-    "1": { gen: 1, total: 1, name: "Kanto"},
-    "2": { gen: 2, total: 152, name: "Johto"},
-    "3": { gen: 3, total: 252, name: "Johto"},
+  "1": { gen: 1, total: 1, name: "Kanto"},
+  "2": { gen: 2, total: 152, name: "Johto"},
+  "3": { gen: 3, total: 252, name: "Johto"},
 }
 
 callingPokedex(1)
@@ -44,42 +44,42 @@ async function getPokemon(geneBegin, geneEnd) {
 }
 
 function createPokemon(name, types, index) {
-    // Pokemon main container
-    const pokemonContainer = document.createElement('div')
-    pokemonContainer.className = "pokemon"
-    
-    // Pokemon image container
-    const pokemonImageContainer = document.createElement('div')
-    pokemonImageContainer.className = "pokemon-container-image"
-
-    const pokemonImage = document.createElement('img')
-    pokemonImage.src = `https://pokeres.bastionbot.org/images/pokemon/${index}.png`
-    pokemonImage.className = "pokemon-image"
-
-    pokemonImageContainer.appendChild(pokemonImage)
-
-    // Pokemon index 
-    const pokemonIndex = document.createElement('h3')
-    pokemonIndex.className = "pokemon-index"
-    pokemonIndex.innerText = index
-
-    // Pokemon name container
-    const pokemonName = document.createElement('h3')
-    pokemonName.className = "pokemon-name"
-    pokemonName.innerText = `${name}`
-    
-    // Pokemon stats
-    const pokemonStats = document.createElement('div')
-    pokemonStats.className = "types"
-
-    for ( type of types ) {
-      const pokemonType = document.createElement('h5')
-      pokemonType.className = type
-      pokemonType.innerText = type
+  // Pokemon main container
+  const pokemonContainer = document.createElement('div')
+  pokemonContainer.className = "pokemon"
   
-      pokemonStats.appendChild(pokemonType)
-    } 
+  // Pokemon image container
+  const pokemonImageContainer = document.createElement('div')
+  pokemonImageContainer.className = "pokemon-container-image"
 
-    pokemonContainer.append(pokemonImageContainer, pokemonIndex, pokemonName, pokemonStats)
-    container.appendChild(pokemonContainer)
+  const pokemonImage = document.createElement('img')
+  pokemonImage.src = `https://pokeres.bastionbot.org/images/pokemon/${index}.png`
+  pokemonImage.className = "pokemon-image"
+
+  pokemonImageContainer.appendChild(pokemonImage)
+
+  // Pokemon index 
+  const pokemonIndex = document.createElement('h3')
+  pokemonIndex.className = "pokemon-index"
+  pokemonIndex.innerText = index
+
+  // Pokemon name container
+  const pokemonName = document.createElement('h3')
+  pokemonName.className = "pokemon-name"
+  pokemonName.innerText = `${name}`
+  
+  // Pokemon stats
+  const pokemonStats = document.createElement('div')
+  pokemonStats.className = "types"
+
+  for ( type of types ) {
+    const pokemonType = document.createElement('h5')
+    pokemonType.className = type
+    pokemonType.innerText = type
+
+    pokemonStats.appendChild(pokemonType)
+  } 
+
+  pokemonContainer.append(pokemonImageContainer, pokemonIndex, pokemonName, pokemonStats)
+  container.appendChild(pokemonContainer)
 }
